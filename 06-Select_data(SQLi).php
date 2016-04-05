@@ -8,7 +8,6 @@ if (!$connect)
    die("Koneksi dengan MySQL gagal");
 }
 
-//membuat table
 $data = "SELECT id, firstname, lastname, email FROM visitor";
 $result = mysqli_query($connect, $data);
 
