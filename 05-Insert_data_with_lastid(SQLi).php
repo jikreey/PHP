@@ -15,9 +15,9 @@ $data = "INSERT INTO visitor (firstname, lastname, email)
 
 if(mysqli_query($connect,$data)) {
 	$last_id = mysqli_insert_id($connect);
-	echo "Data created successfully. Last ID inserted: " . $last_id;
+	echo "Data inserted successfully. Last ID inserted: " . $last_id;
 } else {
-	echo "Data unsuccessfully created: " . mysqli_error($connect); 
+	echo "Data unsuccessfully inserted: " . mysqli_error($connect); 
 }
 
 mysqli_close($connect);
