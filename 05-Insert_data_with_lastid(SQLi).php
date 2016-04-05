@@ -8,7 +8,7 @@ if (!$connect)
    die("Koneksi dengan MySQL gagal");
 }
 
-//membuat table
+//input data
 $data = "INSERT INTO visitor (firstname, lastname, email)
 		VALUES ('syafiq', 'hibatullah', 'syafiq.hibatullah@gmail.com')";
 
