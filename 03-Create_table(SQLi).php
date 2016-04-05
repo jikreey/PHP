@@ -10,7 +10,7 @@ if (!$connect)
 
 //membuat table
 $table = "CREATE TABLE visitor(
-		id INT(6) UNSIGNED PRIMARY KEY,
+		id INT(6) UNSIGNED AUTO_INCERMENT PRIMARY KEY,
 		firstname VARCHAR(30) NOT NULL,
 		lastname VARCHAR(30) NOT NULL,
 		email VARCHAR(30)
