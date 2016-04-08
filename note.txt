@@ -1,0 +1,30 @@
+SELECT column FROM table WHERE id=1;
+SELECT SUM(salary) FROM table;
+SELECT * FROM table ORDER BY city; //ascending city
+SELECT * FROM table ORDER BY city DESC; //descending city
+
+INSERT INTO table VALUES ('id','user','password');
+UPDATE table SET salary=2000 WHERE ID=3;
+DELETE FROM table WHERE ID=3;
+
+CREATE TABLE users (
+	userID int(3) AUTO_INCREMENT NOT NULL PRIMARY KEY,
+	username varchar(20),
+	password varchar(20)
+);
+
+ALTER TABLE table ADD email varchar; //menambahkan kolom
+
+DROP TABLE table; //delete table
+
+ALTER TABLE table DELETE COLUMN email; //delete kolom
+
+ALTER TABLE table CHANGE email mail varchar(20); //rename email jadi mail
+
+CREATE VIEW view_name AS SELECT user,password FROM table; //membuat view view_name dari table
+
+SELECT colom FROM table1 UNION SELECT colom FROM table2; //gabungin table1 dan table2 tanpa duplikat, kalau pake UNION ALL pake duplikat
+
+SELECT customers.ID,customers.Name, orders.name, orders.amount FROM customers,orders WHERE customers.ID=orders.Customer_ID ORDER BY customers.ID; //jadi tuh ini gabungin tabel customers(ID & Name) dengan tabel orders (Name & amount) tp harus ada 1 kolomg yg sama/disamakan
+
+SELECT customers.Name, items.Name FROM customers LEFT OUTER JOIN items ON customers.ID=items.Seller_id;
